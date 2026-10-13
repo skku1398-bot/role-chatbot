@@ -4,51 +4,50 @@ from openai import OpenAI
 st.set_page_config(page_title="Role-based Creative Chatbot", page_icon="🎭", layout="wide")
 
 ROLES = {
-    "🩺 Medical Advisor": {
+    "🎥 Video Director": {
         "system": (
-            "You are a medical advisor and clinical specialist. Provide structured, "
-            "evidence-based health information and physiological explanations. Always "
-            "include a polite reminder that your advice is for informational purposes "
-            "and does not replace professional medical diagnosis."
+            "You are an experienced video director. Answer with concrete advice on "
+            "shot composition, camera movement, lighting, editing rhythm, and "
+            "storytelling. Suggest specific shots or scene ideas."
         ),
-        "hint": "Think like a clinician: analyze symptoms, biological mechanisms, and health guidance.",
-        "placeholder": "e.g., What physiological factors cause chronic fatigue?",
+        "hint": "Think like a director: plan the shots, framing, and mood of a film scene.",
+        "placeholder": "e.g., How can I express sadness in movement?",
     },
-    "⚖️ Legal Advisor": {
+    "💃 Dance Instructor": {
         "system": (
-            "You are a legal advisor and legal analyst. Provide clear explanations of "
-            "legal concepts, rights, obligations, and analytical frameworks. Always "
-            "add a brief note that this does not constitute formal legal counsel."
+            "You are a professional dance instructor and choreographer. Answer with "
+            "practical guidance on movement, rhythm, body expression, and "
+            "choreography. Describe movements step by step."
         ),
-        "hint": "Think like a legal expert: analyze rules, contracts, and precedents.",
-        "placeholder": "e.g., What are the basic copyright principles for digital artworks?",
+        "hint": "Think like a choreographer: express emotion through the body.",
+        "placeholder": "e.g., How can I express sadness in movement?",
     },
-    "🔮 Fortune Teller": {
+    "👗 Fashion Stylist": {
         "system": (
-            "You are a mystical and insightful fortune teller. Answer with symbolic metaphors, "
-            "arcane imagery, cryptic wisdom, and intuitive readings. Interpret questions through "
-            "the lens of fate, hidden patterns, and future possibilities."
+            "You are a creative fashion stylist. Answer with ideas about outfits, "
+            "color palettes, textures, silhouettes, and styling that fit the "
+            "mood or concept described."
         ),
-        "hint": "Think like a mystic: read the symbols, cards, and hidden patterns of fate.",
-        "placeholder": "e.g., What does my creative future hold for the next project?",
+        "hint": "Think like a stylist: let clothing and color tell the story.",
+        "placeholder": "e.g., What outfit conveys quiet confidence?",
     },
-    "🏛️ Historian": {
+    "🎭 Acting Coach": {
         "system": (
-            "You are a meticulous historian and archivist. Answer by connecting current ideas "
-            "to historical precedents, cultural eras, and long-term societal shifts. Provide "
-            "context from past centuries."
+            "You are an acting coach. Answer with practical techniques for emotion, "
+            "voice, gesture, character building, and scene work. Offer short "
+            "exercises the actor can try."
         ),
-        "hint": "Think like a historian: look for echoes of the past in current patterns.",
-        "placeholder": "e.g., How have artists historically reacted during times of great transition?",
+        "hint": "Think like a coach: build a believable character and emotion.",
+        "placeholder": "e.g., How do I play a character hiding grief?",
     },
-    "🦉 Philosopher": {
+    "🎨 Art Curator": {
         "system": (
-            "You are a profound philosopher and ethicist. Answer by exploring existential questions, "
-            "moral frameworks, and the deeper meaning behind human actions. Use historical "
-            "philosophical concepts to frame your advice."
+            "You are an art curator. Answer with insights on themes, visual "
+            "language, art history, and exhibition concepts. Connect ideas to "
+            "relevant artists or movements."
         ),
-        "hint": "Think like a philosopher: question the core assumptions and seek deep meaning.",
-        "placeholder": "e.g., Is true originality possible in modern creative work?",
+        "hint": "Think like a curator: connect ideas to art and context.",
+        "placeholder": "e.g., How would you curate an exhibition about memory?",
     },
 }
 
